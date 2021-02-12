@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./index.css">
+    <script defer src="./app.js"></script>
+    <title>ToDo</title>
+</head>
+<body>
+<section class="main-section">
+    <div class="tabs-wrapper">
+        <div class="tabs">
+            <button class="tab-btn" data-tab="current">Текущие задачи</button>
+            <button class="tab-btn" data-tab="executed">Выполненные задачи</button>
+            <button class="tab-btn" data-tab="deleted">Удалённые задачи</button>
+        </div>
+        <div class="tabs-content">
+            <div class="tab-item"  data-tab-target="current">
+                <ul class="list-current-tasks list-task">
+
+                </ul>
+            </div>
+
+            <div class="tab-item" data-tab-target="executed">
+                <ul class="list-executed-tasks list-task">
+
+                </ul>
+            </div>
+
+            <div class="tab-item" data-tab-target="deleted">
+                <ul class="list-deleted-tasks list-task">
+
+                </ul>
+            </div>
+        </div>
+        <button class="add-task-btn">Добавить задачу</button>
+    </div>
+
+    <div class="modal-window">
+        <div class="modal">
+            <form class="modal-form" action="">
+                <label for="name-task">Название задачи:</label>
+                <input class="modal-task" id="name-task" type="text" name="task-name" value="">
+
+                <label for="description-task">Описание задачи:</label>
+                <input class="modal-task" id="description-task" type="text" name="task-description" value="">
+
+                <label for="priority-task">Приоретет задачи:</label>
+                <select class="priority-task modal-task" id="priority-task" name="task-priority">
+                    <option name="task-trial">Триальное</option>
+                    <option selected name="task-no-limit">Бессрочное</option>
+                    <option name="task-urgently">Срочное</option>
+                </select>
+
+                <input class="form-btn crate-task-btn" value="Добавить задачу" type="submit">
+                <input class="form-btn close-modal-btn" value="Отменить" type="reset">
+
+            </form>
+        </div>
+    </div>
+
+</section>
+
+
+</body>
+</html>
+

@@ -1,0 +1,140 @@
+@import "null.css";
+@import "./template/btn.scss";
+
+:root {
+    --color-bgc: #dbeaff;
+    --color-light: #808080;
+    --color-main: #00a;
+    font-size: clamp(10px, 62.5%, 20px);
+}
+
+.main-section {
+    background-color: #fafafa;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Arial", sans-serif;
+}
+
+.tabs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tabs-content {
+    max-width: 858px;
+    background-color: var(--color-bgc);
+    margin-bottom: 10px;
+    padding: 20px;
+}
+
+.tab-btn:not(:last-child) {
+    margin-right: 10px;
+}
+
+.tab-btn {
+    @extend %btn;
+}
+
+.tab-btn:hover {
+    background-color: #fff;
+    color: var(--color-main);
+}
+
+.tab-btn-active {
+    background-color: #fff;
+    color: var(--color-main);
+    transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+}
+
+.tab-item {
+    display: none;
+    background-color: var(--color-bgc);
+    height: 300px;
+    overflow-y: auto;
+}
+
+.tab-content-active {
+    display: block;
+}
+
+.add-task-btn {
+    background-color: var(--color-main);
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+
+    &:hover {
+        background-color: #fff;
+        color: var(--color-main);
+    }
+
+    &:active {
+        background-color: #00006b;
+        color: var(--color-bgc);
+        transition: background-color 0.1s, color 0.1s;
+    }
+}
+
+        /*========modal===========*/
+
+.modal-window {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0, .8);
+    display: none;
+}
+
+.modal {
+    position: absolute;
+    background: #ffffff;
+    width: 400px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+
+    .modal-form {
+        display: flex;
+        flex-direction: column;
+
+        .modal-task {
+            border: solid 1px #85b1de;
+            background-position: top;
+            background-color: #d6e5f4;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        .form-btn {
+            @extend %btn;
+            border-radius: 5px;
+        }
+
+        .form-btn:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.list-task li {
+    margin-bottom: 15px;
+}
+
+.all-btn {
+    @extend %btn;
+    padding: 5px;
+    border-radius: 2px;
+    &:not(:last-child) {
+        margin-right: 5px;
+    }
+}
+
+.list-task {
+    word-break: break-word;
+}
