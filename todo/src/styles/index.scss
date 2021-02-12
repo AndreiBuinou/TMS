@@ -24,18 +24,22 @@
 }
 
 .tabs-content {
-    max-width: 858px;
+    font-size: 1.8rem;
     background-color: var(--color-bgc);
-    margin-bottom: 10px;
-    padding: 20px;
+    margin-bottom: .6em;
+    padding: 1.25em;
+    max-width: 45em;
 }
 
 .tab-btn:not(:last-child) {
-    margin-right: 10px;
+    margin-right: .7em;
 }
 
 .tab-btn {
     @extend %btn;
+    padding: .9em 3.9em;
+    border-top-left-radius: .3em;
+    border-top-right-radius: 1.25em;
 }
 
 .tab-btn:hover {
@@ -50,9 +54,10 @@
 }
 
 .tab-item {
+    width: 98%;
     display: none;
     background-color: var(--color-bgc);
-    height: 300px;
+    height: 18em;
     overflow-y: auto;
 }
 
@@ -62,8 +67,8 @@
 
 .add-task-btn {
     background-color: var(--color-main);
-    padding: 10px;
-    border-radius: 5px;
+    padding: .6em;
+    border-radius: .3em;
     color: #fff;
 
     &:hover {
@@ -88,6 +93,7 @@
     height: 100%;
     background: rgba(0,0,0, .8);
     display: none;
+    font-size: 1.6rem;
 }
 
 .modal {
@@ -97,7 +103,7 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    padding: 30px;
+    padding: 2em;
 
     .modal-form {
         display: flex;
@@ -107,31 +113,32 @@
             border: solid 1px #85b1de;
             background-position: top;
             background-color: #d6e5f4;
-            padding: 10px;
-            margin-bottom: 15px;
+            padding: .65em;
+            margin-bottom: 1em;
         }
 
         .form-btn {
             @extend %btn;
-            border-radius: 5px;
+            border-radius: .3em;
+            padding: .5em .8em;
         }
 
         .form-btn:not(:last-child) {
-            margin-bottom: 10px;
+            margin-bottom: .6em;
         }
     }
 }
 
 .list-task li {
-    margin-bottom: 15px;
+    margin-bottom: .93em;
 }
 
 .all-btn {
     @extend %btn;
-    padding: 5px;
-    border-radius: 2px;
+    padding: .3em;
+    border-radius: .15em;
     &:not(:last-child) {
-        margin-right: 5px;
+        margin-right: .3em;
     }
 }
 
